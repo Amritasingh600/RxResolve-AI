@@ -1,0 +1,4 @@
+# Keep line endings consistent and never convert binary sample documents
+* text=auto
+*.pdf binary
+*.docx binary

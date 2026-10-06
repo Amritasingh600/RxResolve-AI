@@ -1,0 +1,12 @@
+Title: Member Eligibility Policy (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Purpose
+A claim is paid only if the patient has active coverage on the date of service. Otherwise it is rejected with messages such as "Patient not covered", "Coverage terminated" or "Member not found" (reject codes 65, 67, 68, 69 or demo code EL001).
+
+Common causes
+Common causes include coverage that has ended or not yet started, a new plan that has not been updated in the pharmacy system, or a member ID, date of birth or name that does not match the payer's records.
+
+What staff can do
+Ask the patient for their current insurance card, verify the member ID, group number, name and date of birth, and re-submit the claim. If the patient has other insurance, bill that plan. If the problem continues, contact the payer help desk.

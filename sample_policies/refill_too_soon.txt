@@ -1,0 +1,15 @@
+Title: Refill Too Soon Policy (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Purpose
+The sample plans pay for a refill only after most of the previous supply has been used. A refill requested earlier is rejected with "Refill too soon" (reject code 79 or demo code RT001), usually together with the next fill date.
+
+Sample refill rule
+In this sample policy, a refill can be paid once 80% of the previous days' supply has passed. For a 30-day supply, the next fill date is day 24 after the previous fill.
+
+Early refill situations
+Situations such as a dose change, vacation supply, or lost or damaged medication may qualify for an early refill override in the sample policy. The reason must be documented, and the override is requested by authorized staff through the payer help desk.
+
+What staff can do
+Check the previous fill date and days' supply, tell the patient the next eligible fill date, or document the reason for an early refill and contact the payer help desk.

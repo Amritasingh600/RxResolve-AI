@@ -1,0 +1,12 @@
+Title: Missing or Invalid Claim Information (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Purpose
+Claims with missing or invalid (M/I) fields are rejected before coverage is checked. The rejection message names the field, for example "M/I Prescriber ID" (reject code 25), "M/I Product/Service ID" (reject code 21) or "M/I Date of Service" (reject code 15), or demo code MI001.
+
+What staff can do
+Read the rejection message to find which field is missing or incorrect, correct it using the prescription or patient record, and re-submit the claim. For a missing prescriber ID, confirm the prescriber's NPI from the prescription.
+
+Note
+These rejections are usually solved by correcting data entry and do not need a prior authorization.

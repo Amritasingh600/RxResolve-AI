@@ -1,0 +1,16 @@
+DEMOHEALTH (FICTIONAL PAYER) - CLAIM REJECTION NOTICE
+Sample document for the RxResolveAI student project. All data is fictional.
+
+Patient ID: PT-20001
+Claim ID: RX-70001
+Medication: ExampleMed 50 mg tablet
+Insurance: DemoHealth
+Quantity: 30
+Date of Service: 2026-09-15
+Prescriber: Dr. A. Rivera (fictional)
+Rejection Code: PA001
+Rejection Message: Prior authorization required
+
+The claim listed above could not be paid. Prior authorization is required before this
+medication can be covered under the member's plan. Please submit a prior authorization
+request with the required documentation.

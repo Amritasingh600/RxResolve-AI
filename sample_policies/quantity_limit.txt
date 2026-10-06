@@ -1,0 +1,17 @@
+Title: Quantity Limit Policy (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Purpose
+The sample plans limit the quantity of certain medications that can be dispensed per fill or per 30 days. A claim above the limit is rejected with "Plan limitations exceeded" or "Quantity limit exceeded" (reject code 76 or demo code QL001).
+
+Sample quantity limits
+Painex ER 20 mg tablet: maximum quantity 60 tablets per 30 days.
+Asthmavent inhaler: maximum quantity 1 inhaler per 30 days.
+Migrafen 25 mg tablet: maximum quantity 9 tablets per 30 days.
+
+What staff can do
+Staff should verify the prescribed quantity, directions and days' supply. If the prescription can be filled within the limit, the claim may be re-submitted with the allowed quantity after confirming with the prescriber.
+
+Quantity limit exception
+If the prescriber states that a higher quantity is needed, a quantity limit exception request can be prepared. The request should include the requested quantity, the days' supply, the plan limit, and the prescriber's supporting statement. The request must be reviewed by authorized staff before it is submitted to the payer.

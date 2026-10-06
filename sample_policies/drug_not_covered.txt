@@ -1,0 +1,15 @@
+Title: Non-Formulary / Drug Not Covered Policy (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Purpose
+Medications that are not on the sample plan formulary are not covered. Claims for them are rejected with "Product/service not covered" or "Non-formulary drug" (reject code 70 or demo code NC001).
+
+Non-formulary medications in this sample policy
+Cardiozen 10 mg tablet is not on the MeadowCare Demo Plan formulary. Covered alternatives are listed in the sample formulary.
+
+What staff can do
+Confirm the medication and NDC were entered correctly, check the formulary for covered alternatives, and contact the prescriber about switching to a covered alternative.
+
+Formulary exception
+If the prescriber believes a covered alternative is not appropriate, a formulary exception request can be prepared. It should include the medication requested, the alternatives considered, and the prescriber's supporting statement. Authorized staff must review the request before it is submitted.

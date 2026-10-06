@@ -1,0 +1,15 @@
+Title: Step Therapy Policy (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Purpose
+Under step therapy, the sample plans cover certain medications only after the patient has tried a preferred first-line medication. A claim without a documented trial of the prerequisite drug is rejected with "Step therapy required" (reject code 608 or demo code ST001).
+
+Medications subject to step therapy in this sample policy
+Glucorin XR 500 mg tablet requires a documented trial of a preferred first-line agent from the sample formulary.
+
+How the step is checked
+The sample payer checks the patient's claims history for the prerequisite drug. If the trial was paid by a different plan or paid in cash, it may not appear in the history and documentation is needed.
+
+Step therapy exception
+The prescriber may request a step therapy exception. The request should include the history of prerequisite medications (names and dates), and the prescriber's supporting statement. Pharmacy staff can prepare the administrative parts of the request; the prescriber provides the supporting information.

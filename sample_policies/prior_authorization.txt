@@ -1,0 +1,24 @@
+Title: Prior Authorization Policy (Sample)
+
+FICTIONAL SAMPLE POLICY FOR DEMONSTRATION ONLY. This document was written for the RxResolveAI student project. It does not describe any real insurance company, plan or medication.
+
+Applies to
+DemoHealth, MeadowCare Demo Plan, Summit Sample Health and RiverBend Demo Plan (all fictional payers).
+
+Purpose
+Some medications on the sample formulary require prior authorization (PA) before the plan will pay for them. A claim for one of these medications without an approved PA on file is rejected with the message "Prior authorization required" (demo code PA001 or reject code 75).
+
+Medications that require prior authorization in this sample policy
+ExampleMed 50 mg tablet, Insulex pen 100 units/mL, and any medication marked "PA" in the sample formulary list require prior authorization.
+
+Required documentation
+A prior authorization request should include the patient ID, member ID and plan information, the medication name, strength, quantity and directions, the prescriber name, NPI and contact details, the rejection code and message, and supporting information provided by the prescriber. Missing documentation is the most common reason a PA request is returned.
+
+Supporting information
+Clinical supporting information must be provided by the prescriber. Pharmacy staff collect and forward this information; they do not create it.
+
+Submission process
+In this sample policy, PA requests are submitted by authorized staff using the payer's official form or portal. The sample payer reviews standard requests within 3 business days and expedited requests within 24 hours.
+
+After a decision
+If the request is approved, the claim can be re-submitted. If it is denied, staff should record the reason, inform the prescriber, and review the appeal options stated in the payer's decision letter.
