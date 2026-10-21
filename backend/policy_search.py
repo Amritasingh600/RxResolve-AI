@@ -15,6 +15,7 @@ No vector database or external service is needed.
 """
 import math
 import re
+import threading
 from collections import Counter
 from pathlib import Path
 
@@ -149,13 +150,15 @@ class PolicyIndex:
 
 
 _index = None
+_index_lock = threading.Lock()
 
 
 def get_index() -> PolicyIndex:
     """Return the shared index (created lazily, rebuilt if the folder path changed)."""
     global _index
-    if _index is None or _index.policy_dir != Path(config.POLICY_DIR):
-        _index = PolicyIndex(config.POLICY_DIR)
+    with _index_lock:
+        if _index is None or _index.policy_dir != Path(config.POLICY_DIR):
+            _index = PolicyIndex(config.POLICY_DIR)
     return _index
 
 

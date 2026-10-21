@@ -9,7 +9,7 @@ Tables:
     case_documents      - link table between cases and documents
     case_status_history - audit trail of every status change
 """
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import JSON, Column, Date, DateTime, Float, ForeignKey, Integer, String, Table, Text
 from sqlalchemy.orm import relationship
@@ -41,7 +41,7 @@ class User(Base):
     username = Column(String(50), unique=True, nullable=False, index=True)
     password_hash = Column(String(200), nullable=False)
     full_name = Column(String(100), default="")
-    created_at = Column(DateTime, default=datetime.now)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
 
 class SessionToken(Base):
@@ -93,8 +93,8 @@ class Case(Base):
     # Workflow
     status = Column(String(40), default="New", nullable=False, index=True)
     created_by = Column(String(50), nullable=True)
-    created_at = Column(DateTime, default=datetime.now)
-    updated_at = Column(DateTime, default=datetime.now, onupdate=datetime.now)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))
 
     documents = relationship("Document", secondary=case_documents, back_populates="cases")
     history = relationship(
@@ -113,7 +113,7 @@ class Document(Base):
     file_type = Column(String(10), nullable=False)
     content = Column(Text, nullable=False)
     uploaded_by = Column(String(50), nullable=True)
-    uploaded_at = Column(DateTime, default=datetime.now)
+    uploaded_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     cases = relationship("Case", secondary=case_documents, back_populates="documents")
 
@@ -127,6 +127,6 @@ class StatusHistory(Base):
     new_status = Column(String(40), nullable=False)
     note = Column(String(500), nullable=True)
     changed_by = Column(String(50), nullable=True)
-    changed_at = Column(DateTime, default=datetime.now)
+    changed_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     case = relationship("Case", back_populates="history")

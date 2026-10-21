@@ -9,7 +9,7 @@ Simple local authentication.
 import hashlib
 import hmac
 import secrets
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Optional
 
 from fastapi import Depends, Header, HTTPException, status
@@ -48,11 +48,11 @@ def authenticate(db: Session, username: str, password: str) -> Optional[User]:
 def create_session(db: Session, user: User) -> str:
     # Remove this user's expired sessions so the table does not grow forever.
     db.query(SessionToken).filter(
-        SessionToken.user_id == user.id, SessionToken.expires_at < datetime.now()
+        SessionToken.user_id == user.id, SessionToken.expires_at < datetime.now(timezone.utc)
     ).delete()
 
     token = secrets.token_hex(32)
-    db.add(SessionToken(token=token, user_id=user.id, expires_at=datetime.now() + timedelta(hours=config.SESSION_HOURS)))
+    db.add(SessionToken(token=token, user_id=user.id, expires_at=datetime.now(timezone.utc) + timedelta(hours=config.SESSION_HOURS)))
     db.commit()
     return token
 
@@ -78,6 +78,6 @@ def get_current_user(
 ) -> User:
     """FastAPI dependency: returns the logged-in user or raises 401."""
     session = db.get(SessionToken, token)
-    if session is None or session.expires_at < datetime.now():
+    if session is None or session.expires_at < datetime.now(timezone.utc):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Session expired. Please log in again.")
     return session.user
