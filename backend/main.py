@@ -36,6 +36,11 @@ async def lifespan(app: FastAPI):
             seed_demo_data(db)
         finally:
             db.close()
+    # Initialize policy vector search embedding model and ML classifier
+    from classifier import get_ml_classifier
+    from policy_search import init_policy_search
+    init_policy_search()
+    get_ml_classifier()
     yield
 
 
